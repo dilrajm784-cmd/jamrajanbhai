@@ -18,15 +18,12 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       
-      // ⚠️ Yahan YOUR_PIXEL_ID_HERE ki jagah apna Facebook Pixel ID daalein (e.g., 1234567890)
-      fbq('init', '1017987054439697'); 
-      
-      // PageView Event (Tells Meta someone visited the page)
+      fbq('init', '1250352137176485'); 
       fbq('track', 'PageView');
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
-           src="https://www.facebook.com/tr?id=1017987054439697&ev=PageView&noscript=1"/>
+           src="https://www.facebook.com/tr?id=1250352137176485&ev=PageView&noscript=1"/>
     </noscript>
     <!-- ========================================== -->
     <!-- META PIXEL CODE (END) -->
@@ -37,41 +34,44 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #1a1a1a;
+            background-color: #0b0d17;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 15px 0;
         }
 
         /* Mobile Container Layout */
         .landing-container {
             width: 100%;
-            max-width: 450px;
-            background: linear-gradient(180deg, #0b4f8a 0%, #3d1b54 40%, #a10d32 80%, #0b4f8a 100%);
-            border-radius: 0px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            max-width: 440px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.1);
             text-align: center;
             overflow: hidden;
-            padding-bottom: 25px;
+            padding-bottom: 30px;
+            position: relative;
         }
 
-        /* Top Yellow Header Bar */
+        /* Top Bar */
         .top-bar {
-            background-color: #ffcc00;
+            background: linear-gradient(90deg, #ffd700, #ff9900);
             color: #000;
-            font-weight: bold;
-            padding: 12px;
-            font-size: 16px;
-            letter-spacing: 0.5px;
+            font-weight: 900;
+            padding: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        /* Circular Profile Image */
+        /* Profile Section */
         .profile-section {
             margin: 25px 0 15px 0;
             display: flex;
@@ -79,63 +79,82 @@
         }
 
         .profile-img-box {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 4px solid #ffcc00;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
-            background-color: #000;
+            border: 3px solid #ffd700;
+            padding: 4px;
+            background: linear-gradient(135deg, #ffd700, #ff007f);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
         }
 
         .profile-img-box img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
+            background-color: #000;
         }
 
-        /* Title & Text Section */
+        /* Titles & Text */
         .main-title {
-            color: #ffcc00;
-            font-size: 22px;
+            color: #ffffff;
+            font-size: 20px;
             font-weight: 800;
             margin-bottom: 12px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            padding: 0 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .main-title span {
+            color: #ffd700;
         }
 
         .sub-description {
-            color: #ffcc00;
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.4;
-            padding: 0 15px;
-            margin-bottom: 15px;
+            color: #e2e8f0;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 12px 20px;
+            margin: 0 15px 15px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .tagline {
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 10px;
+            color: #00f2fe;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .users-count {
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: bold;
+            color: #a7f3d0;
+            font-size: 14px;
+            font-weight: 600;
             margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            padding: 4px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
-        /* Feature Cards (White/Cream Box) */
+        /* Feature Cards */
         .info-box {
-            background-color: #ffffdd;
-            color: #000;
-            font-size: 17px;
-            font-weight: bold;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
             padding: 14px;
-            margin: 12px 20px;
+            margin: 10px 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            border-left: 4px solid #ffd700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -144,27 +163,40 @@
 
         /* Timer Text */
         .redirect-text {
-            color: #ffcc00;
-            font-size: 20px;
-            font-weight: bold;
+            color: #ff7b00;
+            font-size: 18px;
+            font-weight: 700;
             margin: 20px 0 15px 0;
         }
 
-        /* Main Telegram Button */
+        .redirect-text span {
+            color: #ffd700;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        /* Telegram Button */
         .join-btn {
             display: block;
-            background-color: #ffcc00;
-            color: #000;
+            background: linear-gradient(90deg, #0088cc 0%, #00c6ff 100%);
+            color: #ffffff;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 800;
             padding: 16px;
             margin: 0 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.5);
             text-transform: uppercase;
-            transition: transform 0.2s;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
             cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.7);
         }
 
         .join-btn:active {
@@ -176,20 +208,18 @@
 
     <div class="landing-container">
         <!-- Top Bar -->
-        <div class="top-bar">
-            
-        </div>
+        <div class="top-bar"></div>
 
         <!-- Center Image Box -->
         <div class="profile-section">
             <div class="profile-img-box">
-                <img src="profile.jpg" alt="Profile Image">
+                <img src="profile.png" alt="Profile Image">
             </div>
         </div>
 
         <!-- Main Heading -->
         <div class="main-title">
-            👑 𝐑𝐀𝐉𝐀𝐍 𝐁𝐇𝐀𝐈 ❤(( 𝐒𝐀𝐓𝐓𝐀 𝐊𝐈𝐍𝐆 ))
+            👑 𝐑𝐀𝐉𝐀𝐍 𝐁𝐇𝐀𝐈 ❤(( <span>𝐒𝐀𝐓𝐓𝐀 𝐊𝐈𝐍𝐆</span> ))
         </div>
 
         <!-- Description Text -->
@@ -209,7 +239,7 @@
 
         <!-- Info Boxes -->
         <div class="info-box">
-            🤝 💎फरीदाबाद, गाजियाबाद 💎
+            🤝 💎 फरीदाबाद, गाजियाबाद 💎
         </div>
 
         <div class="info-box">
@@ -222,32 +252,28 @@
 
         <!-- Redirecting Timer Text -->
         <div class="redirect-text">
-            Redirecting in <span id="timer">30</span>...
+            Redirecting in <span id="timer">30</span>s...
         </div>
 
         <!-- Bottom Join Button -->
-        <a id="telegramLink" href="https://t.me/+T9FJqXkVP4RkOWFl" class="join-btn" onclick="trackButtonClick()">
+        <a id="telegramLink" href="https://t.me/+XzoAGEvlRDVlZmU1" class="join-btn" onclick="trackButtonClick()">
             JOIN TELEGRAM CHANNEL
         </a>
     </div>
 
-    <!-- 20-Second Timer, Auto Redirect & Meta Event Tracking Script -->
+    <!-- 10-Second Timer, Auto Redirect & Meta Event Tracking Script -->
     <script>
-        // Yahan apna Telegram Link daalein
-        let telegramUrl = "https://t.me/+T9FJqXkVP4RkOWFl"; 
+        let telegramUrl = "https://t.me/+XzoAGEvlRDVlZmU1"; 
 
-        // Button par link set karna
         document.getElementById("telegramLink").href = telegramUrl;
 
-        // Button Click Event Tracking (Jab koi button dabaye tab Meta me Click track hoga)
         function trackButtonClick() {
             if(typeof fbq !== 'undefined') {
-                fbq('trackCustom', 'TelegramBtnClick'); // Custom Event
-                fbq('track', 'Subscribe'); // Subscribe Event (Updated from Lead)
+                fbq('trackCustom', 'TelegramBtnClick');
+                fbq('track', 'Subscribe');
             }
         }
 
-        // Countdown Timer
         let timeLeft = 30;
         let timerElement = document.getElementById("timer");
 
@@ -258,12 +284,10 @@
             if (timeLeft <= 0) {
                 clearInterval(countdown);
                 
-                // Track redirect event before navigating
                 if(typeof fbq !== 'undefined') {
                     fbq('trackCustom', 'AutoRedirect');
                 }
 
-                // Auto Redirect
                 window.location.href = telegramUrl;
             }
         }, 1000);
