@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐑𝐀𝐉𝐀𝐍 𝐁𝐇𝐀𝐈 ❤(( 𝐒𝐀𝐓𝐓𝐀 𝐊𝐈𝐍𝐆 ))</title>
 
-    <!-- ========================================== -->
-    <!-- 1. META PIXEL & TRACKING CODE (START) -->
-    <!-- ========================================== -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,9 +22,6 @@
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1739032997418103&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- ========================================== -->
-    <!-- META PIXEL CODE (END) -->
-    <!-- ========================================== -->
 
     <style>
         * {
@@ -46,7 +40,6 @@
             padding: 15px 0;
         }
 
-        /* Mobile Container Layout */
         .landing-container {
             width: 100%;
             max-width: 440px;
@@ -60,7 +53,6 @@
             position: relative;
         }
 
-        /* Top Bar */
         .top-bar {
             background: linear-gradient(90deg, #ffd700, #ff9900);
             color: #000;
@@ -71,7 +63,6 @@
             text-transform: uppercase;
         }
 
-        /* Profile Section */
         .profile-section {
             margin: 25px 0 15px 0;
             display: flex;
@@ -96,7 +87,6 @@
             background-color: #000;
         }
 
-        /* Titles & Text */
         .main-title {
             color: #ffffff;
             font-size: 20px;
@@ -143,7 +133,6 @@
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
-        /* Feature Cards */
         .info-box {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
             color: #fff;
@@ -161,7 +150,6 @@
             gap: 8px;
         }
 
-        /* Timer Text */
         .redirect-text {
             color: #ff7b00;
             font-size: 18px;
@@ -175,7 +163,6 @@
             font-weight: 800;
         }
 
-        /* Telegram Button */
         .join-btn {
             display: block;
             background: linear-gradient(90deg, #0088cc 0%, #00c6ff 100%);
@@ -207,88 +194,83 @@
 <body>
 
     <div class="landing-container">
-        <!-- Top Bar -->
         <div class="top-bar"></div>
 
-        <!-- Center Image Box -->
         <div class="profile-section">
             <div class="profile-img-box">
                 <img src="profile.png" alt="Profile Image">
             </div>
         </div>
 
-        <!-- Main Heading -->
         <div class="main-title">
             👑 𝐑𝐀𝐉𝐀𝐍 𝐁𝐇𝐀𝐈 ❤(( <span>𝐒𝐀𝐓𝐓𝐀 𝐊𝐈𝐍𝐆</span> ))
         </div>
 
-        <!-- Description Text -->
         <div class="sub-description">
             डेली सिंगल जोड़ी रोजाना आपको इस टेलीग्राम पर फ्री मिलेगी ख़बर सबसे पहले मिलेगी टेलीग्राम चैनल ज्वाइन करो गेम मिलेंगे 👑
         </div>
 
-        <!-- Tagline -->
         <div class="tagline">
             ⚡ ALL MATKA GAMES AVAILABLE ⚡ Best Expert
         </div>
 
-        <!-- Users Joined -->
         <div class="users-count">
             👥 40k+ users joined
         </div>
 
-        <!-- Info Boxes -->
-        <div class="info-box">
-            🤝 💎 फरीदाबाद, गाजियाबाद 💎
-        </div>
+        <div class="info-box">🤝 💎 फरीदाबाद, गाजियाबाद 💎</div>
+        <div class="info-box">🤝 💎 गली , दिसावर 💎</div>
+        <div class="info-box">📚 1001% FIX GAME MILEGA</div>
 
-        <div class="info-box">
-            🤝 💎 गली , दिसावर 💎
-        </div>
-
-        <div class="info-box">
-            📚 1001% FIX GAME MILEGA
-        </div>
-
-        <!-- Redirecting Timer Text -->
         <div class="redirect-text">
             Redirecting in <span id="timer">10</span>s...
         </div>
 
-        <!-- Bottom Join Button -->
-        <a id="telegramLink" href="https://t.me/+XzoAGEvlRDVlZmU1" class="join-btn" onclick="trackButtonClick()">
+        <a id="telegramLink" href="javascript:void(0);" onclick="handleTelegramClick(event)" class="join-btn">
             JOIN TELEGRAM CHANNEL
         </a>
     </div>
 
-    <!-- 10-Second Timer, Auto Redirect & Meta Event Tracking Script -->
     <script>
-        let telegramUrl = "https://t.me/+XzoAGEvlRDVlZmU1"; 
+        const telegramUrl = "https://t.me/+XzoAGEvlRDVlZmU1"; 
+        let redirected = false;
 
-        document.getElementById("telegramLink").href = telegramUrl;
-
-        function trackButtonClick() {
-            if(typeof fbq !== 'undefined') {
-                fbq('trackCustom', 'TelegramBtnClick');
-                fbq('track', 'Subscribe');
+        // Redirect Function
+        function redirectToTelegram() {
+            if (!redirected) {
+                redirected = true;
+                window.location.href = telegramUrl;
             }
         }
 
-        let timeLeft = 10;
-        let timerElement = document.getElementById("timer");
+        // Button Click Handler
+        function handleTelegramClick(event) {
+            if (event) event.preventDefault();
+            
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Subscribe');
+            }
 
-        let countdown = setInterval(function() {
+            // 300ms delay for tracking delivery
+            setTimeout(redirectToTelegram, 300);
+        }
+
+        // Auto Redirect Timer
+        let timeLeft = 10;
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(function() {
             timeLeft--;
-            timerElement.textContent = timeLeft;
+            if (timerElement) timerElement.textContent = timeLeft;
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
                 
-                if(typeof fbq !== 'undefined') {
-                    fbq('trackCustom', 'AutoRedirect');
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Subscribe');
                 }
 
-                window.location.href = telegramUrl;
+                setTimeout(redirectToTelegram, 300);
             }
         }, 1000);
     </script>
